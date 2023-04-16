@@ -1,16 +1,23 @@
-# This is a sample Python script.
+import os
+print(os.path.dirname(os.path.abspath(__file__)))
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# Ask user for their name, name is the variable and input the function which helps us to already print out the question
+# From there we are going to use the function print to finally answer back the user based on the variable it was entered
+# A parameter is the declared variable in the function (here the function is "input" which will pass "name" as the var)
+# An argument belong to the function or method, it is the actual value passed (which will be name entered by the user)
 
+# Have in mind the possible solutions for the same challenge:
+# Either you use +, either you call the variable itself when printing
+# Also don't forget the space usage possible parameters like "sep=" & "end"
+# Using escaping parameters provides more flexibility on the text you want to show \
+# Remove whitespace from str & Capitalize user's whole name
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+name = input("What's your name? ").strip().title()
 
+# Split user's name into first name and last name
+first, last = name.split(" ")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('Rodo')
+# Say hello to user using just the first name (noticed we are leveraging the previous function)
+print(f"Hello, {first}")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# int stands for integer, means numbers. str stands for string, means letters
